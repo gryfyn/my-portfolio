@@ -1,0 +1,57 @@
+/* src/styles/About.css */
+
+.about-section {
+  background-color: #000;
+  color: #d9e4ec;
+  padding: 5rem 2rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.passport-photo {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid #7f5af0;
+  object-fit: cover;
+  margin-top: 50px;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #7f5af0;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.bio-info {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #aaa;
+}

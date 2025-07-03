@@ -1,0 +1,50 @@
+/* src/styles/Header.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: #000;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0;
+}
+
+.logo {
+  color: #7f5af0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #d9e4ec;
+  text-decoration: none;
+  font-weight: light;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #E0115F;
+}
