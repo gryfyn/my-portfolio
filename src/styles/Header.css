@@ -1,5 +1,3 @@
-/* src/styles/Header.css */
-
 .header {
   position: sticky;
   top: 0;
@@ -7,9 +5,7 @@
   right: 0;
   height: 100px;
   background-color: #000;
-  padding-top: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 3rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -19,7 +15,7 @@
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .logo {
@@ -47,4 +43,92 @@
 .nav-links li a:hover,
 .nav-links li a.active {
   color: #E0115F;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .header {
+    height: auto; /* Allow flexible height */
+    padding: 1.5rem 1rem; /* Reduce padding */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Smaller logo */
+  }
+
+  /* Hamburger menu setup */
+  .nav {
+    position: relative;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #000;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Show nav links when checkbox is checked */
+  #menu-toggle:checked ~ .nav .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    font-size: 1rem; /* Smaller link text */
+  }
+
+  /* Hamburger icon */
+  .nav::before {
+    content: '\2630'; /* Hamburger icon (☰) */
+    color: #d9e4ec;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: -1.5rem;
+  }
+
+  /* Hide hamburger icon when menu is open */
+  #menu-toggle:checked ~ .nav::before {
+    content: '\2715'; /* Close icon (✕) */
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 0.5rem; /* Further reduce padding */
+  }
+
+  .logo {
+    font-size: 1.3rem; /* Even smaller logo */
+  }
+
+  .nav-links {
+    width: 150px; /* Smaller menu width */
+    padding: 0.8rem; /* Reduce padding */
+  }
+
+  .nav-links li a {
+    font-size: 0.9rem; /* Even smaller link text */
+  }
+
+  .nav::before {
+    font-size: 1.3rem; /* Smaller hamburger icon */
+    right: 0.5rem;
+    top: -1.3rem;
+  }
+}
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
 }

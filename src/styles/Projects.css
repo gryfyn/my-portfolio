@@ -19,6 +19,12 @@
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #7f5af0;
+  margin-bottom: 2rem; /* Added spacing between cards */
+}
+
+.project-embed {
+  flex: 1;
+  min-width: 300px; /* Ensure iframe doesn't get too small */
 }
 
 .project-embed iframe {
@@ -30,6 +36,7 @@
 
 .project-info {
   flex: 1;
+  min-width: 280px; /* Ensure text content has enough space */
 }
 
 .project-info h3 {
@@ -50,4 +57,78 @@
 
 .project-info a:hover {
   text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .projects-title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .project-card {
+    flex-direction: column; /* Stack iframe and info vertically */
+    gap: 1.5rem; /* Reduce gap */
+    padding: 1.5rem; /* Reduce card padding */
+  }
+
+  .project-embed {
+    min-width: 100%; /* Full width for iframe */
+  }
+
+  .project-embed iframe {
+    max-width: 100%; /* Full width iframe */
+    height: 250px; /* Reduce iframe height for mobile */
+  }
+
+  .project-info {
+    min-width: 100%; /* Full width for text */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .project-info h3 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .project-info p {
+    font-size: 0.95rem; /* Smaller paragraph text */
+  }
+
+  .project-info a {
+    font-size: 0.95rem; /* Smaller link text */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 2rem 0.5rem; /* Further reduce padding */
+  }
+
+  .projects-title {
+    font-size: 1.8rem; /* Even smaller title */
+  }
+
+  .project-card {
+    padding: 1rem; /* Further reduce card padding */
+    gap: 1rem; /* Further reduce gap */
+  }
+
+  .project-embed iframe {
+    height: 200px; /* Even smaller iframe height */
+  }
+
+  .project-info h3 {
+    font-size: 1.3rem; /* Even smaller heading */
+  }
+
+  .project-info p {
+    font-size: 0.9rem; /* Even smaller paragraph text */
+  }
+
+  .project-info a {
+    font-size: 0.9rem; /* Even smaller link text */
+  }
 }

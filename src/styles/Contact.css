@@ -1,5 +1,3 @@
-/* src/styles/Contact.css */
-
 .contact-section {
   background-color: #000;
   color: #d9e4ec;
@@ -157,4 +155,120 @@
 
 .linkedin {
   color: #0077B5;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+  }
+
+  .contact-title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .contact-subtext {
+    font-size: 1rem; /* Smaller subtext */
+    max-width: 90%; /* Ensure subtext fits well */
+  }
+
+  .contact-info-row {
+    flex-direction: column; /* Stack info cards vertically */
+    gap: 1rem; /* Reduce gap */
+    align-items: center; /* Center cards */
+  }
+
+  .info-card {
+    min-width: 100%; /* Full width for cards */
+    max-width: 300px; /* Cap card width */
+    padding: 1.2rem; /* Slightly less padding */
+  }
+
+  .icon {
+    font-size: 1.8rem; /* Smaller icon */
+  }
+
+  .info-card h3 {
+    font-size: 0.95rem; /* Smaller heading */
+  }
+
+  .info-card p,
+  .info-card a {
+    font-size: 0.9rem; /* Smaller text */
+  }
+
+  .contact-form {
+    max-width: 90%; /* Ensure form fits screen */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem; /* Smaller input text */
+    padding: 0.8rem; /* Slightly less padding */
+  }
+
+  .contact-form button {
+    font-size: 1rem; /* Smaller button text */
+    padding: 0.8rem; /* Slightly less padding */
+  }
+
+  .social-icons {
+    gap: 1.5rem; /* Reduce gap between icons */
+    font-size: 1.8rem; /* Smaller social icons */
+  }
+
+  .social-text {
+    font-size: 0.95rem; /* Smaller social text */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 2rem 0.5rem; /* Further reduce padding */
+  }
+
+  .contact-title {
+    font-size: 1.8rem; /* Even smaller title */
+  }
+
+  .contact-subtext {
+    font-size: 0.9rem; /* Even smaller subtext */
+  }
+
+  .info-card {
+    padding: 1rem; /* Further reduce padding */
+  }
+
+  .icon {
+    font-size: 1.5rem; /* Even smaller icon */
+  }
+
+  .info-card h3 {
+    font-size: 0.9rem; /* Even smaller heading */
+  }
+
+  .info-card p,
+  .info-card a {
+    font-size: 0.85rem; /* Even smaller text */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem; /* Even smaller input text */
+    padding: 0.7rem; /* Further reduce padding */
+  }
+
+  .contact-form button {
+    font-size: 0.95rem; /* Even smaller button text */
+    padding: 0.7rem; /* Further reduce padding */
+  }
+
+  .social-icons {
+    gap: 1.2rem; /* Further reduce gap */
+    font-size: 1.5rem; /* Even smaller social icons */
+  }
+
+  .social-text {
+    font-size: 0.9rem; /* Even smaller social text */
+  }
 }

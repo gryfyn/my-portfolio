@@ -1,7 +1,8 @@
 .home-section {
   background-color: #000;
   color: #d9e4ec;
-  margin-top: -14em;
+  padding: 5rem 2rem; /* Added padding for consistency */
+  margin-top: -14em; /* Kept as per original */
 }
 
 .home-container {
@@ -45,4 +46,54 @@
   height: auto;
   object-fit: contain;
   border-radius: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-section {
+    padding: 3rem 1rem; /* Reduce padding for smaller screens */
+    margin-top: -10em; /* Adjust margin for better mobile fit */
+  }
+
+  .home-container {
+    flex-direction: column; /* Stack text and image vertically */
+    gap: 1.5rem; /* Reduce gap */
+    align-items: center; /* Center content */
+  }
+
+  .home-text {
+    min-width: 100%; /* Full width for text */
+    text-align: center; /* Center text for better readability */
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem; /* Smaller heading */
+  }
+
+  .home-image {
+    min-width: 100%; /* Full width for image */
+  }
+
+  .hero-image {
+    max-width: 80%; /* Reduce image size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section {
+    padding: 2rem 0.5rem; /* Further reduce padding */
+    margin-top: -8em; /* Further adjust margin */
+  }
+
+  .home-text h1 {
+    font-size: 2rem; /* Even smaller heading */
+  }
+
+  .home-text .highlight {
+    font-size: 1.8rem; /* Slightly smaller highlight text */
+  }
+
+  .hero-image {
+    max-width: 90%; /* Slightly larger image for very small screens */
+  }
 }
